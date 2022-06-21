@@ -1,0 +1,21 @@
+a {
+    color: white
+}
+
+#navi {
+    border-radius: 0 0 5px 5px;
+}
+
+#logoutbtn {
+    color: darkred;
+    border-color: darkred;
+}
+
+#logoutbtn:hover {
+    background-color: darkred;
+    color: white;
+}
+
+#logoutbtn:active {
+    background-color: darkred
+}

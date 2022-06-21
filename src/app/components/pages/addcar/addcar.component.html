@@ -1,0 +1,23 @@
+<h3 style="margin-top:25px;">Add New Car</h3>
+
+<form [formGroup]="carAddForm" (ngSubmit)="add()" >
+        <div class="form-group mb-1">
+        <input type="text" id="logo" formControlName="brandName" class="form-control" placeholder="enter car name">
+        <div class="alert alert-danger"
+        *ngIf="carAddForm.get('brandName').hasError('required') && carAddForm.get('brandName').dirty">brandName
+        is required</div>
+    </div>
+    <div class="form-group mb-1">
+        <input type="text" id="logo" formControlName="description" class="form-control" placeholder="enter car description">
+        <div class="alert alert-danger"
+        *ngIf="carAddForm.get('description').hasError('required') && carAddForm.get('description').dirty">description
+        is required</div>
+    </div>
+    <div class="form-group mb-3">
+        <input type="text" id="logo" formControlName="logo" class="form-control" placeholder="enter car logo url">
+        <div class="alert alert-danger"
+        *ngIf="carAddForm.get('logo').hasError('required') && carAddForm.get('logo').dirty">logo
+        is required</div>
+    </div>
+    <button type="submit"  class="btn btn-primary" [disabled]="carAddForm.invalid">Add Brand!</button>
+</form>
