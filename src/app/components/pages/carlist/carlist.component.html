@@ -1,18 +1,17 @@
-
-    <div class="row">
-    <div *ngFor="let car of cars" class="card" style="width: 18rem; margin-top:25px; margin-right:35px;" id="carCard">
-      <img src="{{car.logo}}" class="card-img-top" style="width:250px; margin-top: 10px;margin-left: 7px;">
-      <div class="card-body">
-        <h5 class="card-title">{{car.brandName}}</h5>
-        <div class="card-text">Color: {{car.colorName}}</div>
-        <div class="card-text">Car Model: {{car.description}}</div>
-        <div class="card-text">Daily Price: {{car.dailyPrice | currency }}</div><br>
-        <div class="row">
-        <a  id="rentbtn"  routerLink="rent/{{car.id}}" class="btn btn-info">Rent</a>
-        </div>
-          <a  *ngIf="isLoggedIn() == true" href="#" id="updatebtn" class="btn btn-info" >Update</a>
-          <a  *ngIf="isLoggedIn() == true" id="deletebtn" class="btn btn-primary" (click)="deleteCar(car.id)">Delete</a>
+<div class="row">
+  <div *ngFor="let car of cars" class="card" style="width: 18rem; margin-top:25px; margin-right:35px;" id="carCard">
+    <img src="{{car.logo}}" class="card-img-top" style="width:250px; margin-top: 10px;margin-left: 7px;">
+    <div class="card-body">
+      <h5 class="card-title">{{car.brandName}}</h5>
+      <div class="card-text">Color: {{car.colorName}}</div>
+      <div class="card-text">Car Model: {{car.description}}</div>
+      <div class="card-text">Daily Price: {{car.dailyPrice | currency }}</div><br>
+      <div class="row">
+        <button id="rentbtn" routerLink="rent/{{car.id}}" class="btn btn-info">Rent</button>
       </div>
+      <a *ngIf="isLoggedIn() == true" id="btn1" type="button" class="btn btn-info "
+        routerLink="updatecar/{{car.id}}">Update</a>
+      <button *ngIf="isLoggedIn() == true" id="deletebtn" class="btn btn-primary" (click)="deleteCar(car.id)">Delete</button>
     </div>
   </div>
-
+</div>

@@ -46,10 +46,7 @@ export class BrandupdateComponent implements OnInit {
         alert(data.name +" başarılıyla güncellendi")
       })
     }
-  
-  
     getBrandById(){
-  
       this.activatedRoute.params.subscribe(params=>{
         if(params["id"])
         this.selectedId=params["id"]
@@ -60,7 +57,6 @@ export class BrandupdateComponent implements OnInit {
       })
   
     }
-
     deleteBrand(val:number){
            if(confirm("Are you sure to delete ")) {
           this.brandService.deleteBrand(val).subscribe()

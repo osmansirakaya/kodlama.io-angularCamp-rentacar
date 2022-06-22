@@ -16,6 +16,8 @@ import { LoginComponent } from './components/pages/login/login.component';
 import { AccountService } from './services/account.service';
 import { LoginGuard } from './components/pages/login/login.guard';
 import { AddcarComponent } from './components/pages/addcar/addcar.component';
+import { CarupdateComponent } from './components/pages/carupdate/carupdate.component';
+import { RentComponent } from './components/pages/rent/rent.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { AddcarComponent } from './components/pages/addcar/addcar.component';
     CarlistComponent,
     BrandupdateComponent,
     LoginComponent,
-    AddcarComponent
+    AddcarComponent,
+    CarupdateComponent,
+    RentComponent
 
  
   ],
