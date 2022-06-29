@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import Brand from 'src/app/models/brand';
 import { BrandService } from 'src/app/services/brand.service';
@@ -16,11 +16,11 @@ export class BrandupdateComponent implements OnInit {
   selectedId:number=1
   brands: Brand[];
 
-  constructor(private formBuilder:FormBuilder,
+  constructor(private formBuilder:UntypedFormBuilder,
      private brandService:BrandService,
      private activatedRoute:ActivatedRoute) { }
 
-     brandAddForm:FormGroup
+     brandAddForm:UntypedFormGroup
      updateBrandAddForm(){
       this.brandAddForm=this.formBuilder.group({
         id:[this.brand.id,Validators.required],

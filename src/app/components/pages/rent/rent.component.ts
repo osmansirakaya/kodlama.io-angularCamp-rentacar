@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 import { Car } from 'src/app/models/car';
 
 @Component({
@@ -13,7 +13,7 @@ export class RentComponent implements OnInit {
   car: Car
 
  
-    carPropForm: FormGroup
+    carPropForm: UntypedFormGroup
     isCheck: boolean = false
     carId:Car;
 

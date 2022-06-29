@@ -7,15 +7,15 @@ a {
 }
 
 #logoutbtn {
-    color: darkred;
-    border-color: darkred;
+    color: rgb(245, 40, 40);
+    border-color: rgb(245, 40, 40);
 }
 
 #logoutbtn:hover {
-    background-color: darkred;
+    background-color: rgb(245, 40, 40);
     color: white;
 }
 
 #logoutbtn:active {
-    background-color: darkred
+    background-color: rgb(245, 40, 40);
 }

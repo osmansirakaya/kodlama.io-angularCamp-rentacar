@@ -18,6 +18,10 @@ import { LoginGuard } from './components/pages/login/login.guard';
 import { AddcarComponent } from './components/pages/addcar/addcar.component';
 import { CarupdateComponent } from './components/pages/carupdate/carupdate.component';
 import { RentComponent } from './components/pages/rent/rent.component';
+import { RegisterComponent } from './components/pages/register/register.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+// import { GoogleMapsModule } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,10 @@ import { RentComponent } from './components/pages/rent/rent.component';
     LoginComponent,
     AddcarComponent,
     CarupdateComponent,
-    RentComponent
+    RentComponent,
+    RegisterComponent,
+    ContactComponent,
+ 
 
  
   ],
@@ -40,7 +47,8 @@ import { RentComponent } from './components/pages/rent/rent.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+     GoogleMapsModule
   ],
   providers: [AccountService, LoginGuard],
   bootstrap: [AppComponent]

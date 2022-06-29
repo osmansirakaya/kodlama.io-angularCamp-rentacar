@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Car } from 'src/app/models/car';
 import { CarService } from 'src/app/services/car.service';
 
@@ -15,10 +15,10 @@ export class AddcarComponent implements OnInit {
   selectedId:number=1
   brands: Car[];
 
-  constructor(private formBuilder:FormBuilder,
+  constructor(private formBuilder:UntypedFormBuilder,
     private carService:CarService) { }
 
-  carAddForm:FormGroup
+  carAddForm:UntypedFormGroup
 
   createCarAddForm(){
     this.carAddForm=this.formBuilder.group({

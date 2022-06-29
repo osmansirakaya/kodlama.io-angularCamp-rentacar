@@ -1,0 +1,27 @@
+<body class="text-center">
+    <main class="form-signin w-100 m-auto"> 
+<form style="margin-top:50px ;" [formGroup]="userAddForm" (ngSubmit)="addUser()">
+    <img class="mb-4"
+    src="https://www.pngitem.com/pimgs/m/237-2370224_register-user-register-icon-png-transparent-png.png"
+    alt="" width="75" height="75">
+  <h1 class="h3 mb-3 fw-normal">Register</h1>
+
+  <div class="form-floating mb-1">
+    <input style="margin-top:15px ;" type="text" name="eMail"  id="eMail" formControlName="eMail" class="form-control"
+      placeholder="Mail Adresinizi Giriniz!">
+      <div class="alert alert-danger"
+      *ngIf="userAddForm.get('eMail').hasError('required') && userAddForm.get('eMail').dirty"> Mail girmek zorunludur
+    </div>
+  </div>
+  <div class="form-floating">
+    <input style="margin-top:15px ;" type="password" id="password" formControlName="password" class="form-control"
+      placeholder="Şifrenizi Giriniz!">
+      <div class="alert alert-danger"
+      *ngIf="userAddForm.get('password').hasError('required') && userAddForm.get('password').dirty"> Şifre girmek zorunludur.
+    </div>
+  </div>
+  <button   style="margin-top:15px ;" type="submit" class="w-100 btn btn-lg btn-warning">Kayıt ol</button>
+  <p class="mt-4 text-muted">&copy; 2019–2022</p>
+</form>
+</main> 
+</body>

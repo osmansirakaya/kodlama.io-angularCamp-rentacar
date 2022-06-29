@@ -9,6 +9,9 @@
           <li class="nav-item">
             <a *ngIf="isLoggedIn() == true" class="nav-link" routerLink="addcar">Add Car</a>
           </li>
+          <li class="nav-item">
+            <a  class="nav-link" routerLink="contact/">Contact</a>
+          </li>
           <!-- <li class="nav-item">
             <a *ngIf="isLoggedIn() == true" class="nav-link" routerLink="detail">Car Details</a>
           </li> -->
@@ -26,8 +29,9 @@
             </li>
           </ul>
         </div>
-        <button *ngIf="isLoggedIn() == true" id="logoutbtn" class="btn btn-outline-success" type="submit" (click)="logOut()">Log Out</button>
-        <button *ngIf="isLoggedIn() == false" id="loginbtn" class="btn btn-outline-success" type="submit" routerLink="login">Login</button>
+        <button *ngIf="isLoggedIn() == true" id="logoutbtn" routerLink="login/" class="btn btn-outline-success" type="submit"  (click)="logOut()">Log Out</button>
+        <button *ngIf="isLoggedIn() == false"  class="btn btn-outline-warning" type="submit" routerLink="register/">Register</button>
+        <button *ngIf="isLoggedIn() == false" id="loginbtn" class="btn btn-outline-success " type="submit" routerLink="login" style="margin-left: 10px;">Login</button>
       </div>
     </div>
   </nav>
