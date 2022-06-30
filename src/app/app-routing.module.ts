@@ -24,6 +24,8 @@ const routes: Routes = [
   {path:"rent/:id",  component:RentComponent},
   {path:"login",  component:LoginComponent, canDeactivate:[PageBackGuard]},
   { path: "contact", component: ContactComponent },
+  { path: "register", component:RegisterComponent  },
+
    
   
 ];

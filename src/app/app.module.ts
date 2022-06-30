@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NavComponent } from './common/nav/nav.component';
 import { BrandComponent } from './common/brand/brand.component';
 import { AddbrandComponent } from './common/brand/addbrand/addbrand.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ColorlistComponent } from './common/colorlist/colorlist.component';
@@ -21,7 +21,13 @@ import { RentComponent } from './components/pages/rent/rent.component';
 import { RegisterComponent } from './components/pages/register/register.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { GoogleMapsModule } from '@angular/google-maps';
-// import { GoogleMapsModule } from '@angular/google-maps';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function httpTranslateLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
+
 
 @NgModule({
   declarations: [
@@ -38,9 +44,6 @@ import { GoogleMapsModule } from '@angular/google-maps';
     RentComponent,
     RegisterComponent,
     ContactComponent,
- 
-
- 
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,14 @@ import { GoogleMapsModule } from '@angular/google-maps';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-     GoogleMapsModule
+    GoogleMapsModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [AccountService, LoginGuard],
   bootstrap: [AppComponent]
