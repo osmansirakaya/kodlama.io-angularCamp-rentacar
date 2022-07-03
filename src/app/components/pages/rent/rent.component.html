@@ -1,18 +1,57 @@
-<div class="container">
+<div class="container mt-4 mb-4 border pt-2 pb-2">
     <div class="row">
-        <div class="card ; col-md-3">
-            <img src="{{car.logo}}">
-            <div class="card-body" *ngIf="car">
-                <h5 class="card-title">{{ car.brandName }}</h5>
-                <p class="card-text">Model: {{ car.description }}</p>
-                <p class="card-text">Renk: {{ car.colorName }}</p>
-                <p class="card-text">Günlük fiyat: {{ car.dailyPrice }}</p>
+        <div class="card  col-md-3">          
+            <img src="https://i.pinimg.com/originals/51/70/6d/51706de4734ec4712c7bfe0fb7d550ea.jpg">
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">Model: AUDI</p>
+                <p class="card-text">Renk: GREEN</p>
+                <p class="card-text">Günlük fiyat: $3,000.00</p>
             </div>
-        </div>
-        <div class="col-md-8">
+        </div>  
+       
+         <div class="col-md-9">
+            <strong style="text-align:center; margin:0 0 5px 5px;">Ek Hizmetler</strong> 
             <ul class="list-group">
                 <li class="list-group-item">
-                    <button style="float: right" type="button" class="btn btn-primary">
+                    <i>Güvence Paketi</i>
+                    <button style="float: right" type="button" class="btn btn-info">
+                        Ekle
+                    </button>
+                </li>
+                <li class="list-group-item">
+                    <i>Çocuk Koltuğu</i>
+                    <button style="float: right" type="button" class="btn btn-info">
+                        Ekle
+                    </button>
+                </li>
+                <li class="list-group-item">
+                    <i>Ek Sürücü</i>
+                    <button style="float: right" type="button" class="btn btn-info">
+                        Ekle
+                    </button>
+                </li>
+                <li class="list-group-item">
+                    <i>Yol Yardım Assistans</i>
+                    <button style="float: right" type="button" class="btn btn-info">
+                        Ekle
+                    </button>
+                </li>
+                <li class="list-group-item">
+                    <i>GPS</i>
+                    <button style="float: right" type="button" class="btn btn-info">
+                        Ekle
+                    </button>
+                </li>
+                <li class="list-group-item">
+                    <i>Adrese Teslim</i>
+                    <button style="float: right" type="button" class="btn btn-info">
+                        Ekle
+                    </button>
+                </li>
+                <li class="list-group-item">
+                    <i>Adresten İade</i>
+                    <button style="float: right" type="button" class="btn btn-info">
                         Ekle
                     </button>
                 </li>
@@ -166,11 +205,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group mb-3">
                             <label for="" class="form-label">Adres*</label>
                             <textarea class="form-control form-control-textarea js-address" maxlength="140"
                                 name="BillingInformation.Address" required=""></textarea>
                         </div>
+                        <button class="w-100 btn btn-lg btn-success" type="submit">Kirala</button>
                     </div>
                 </div>
             </div>
